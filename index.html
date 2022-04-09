@@ -2,38 +2,93 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travel agency landing</title>
-  <link rel="stylesheet" href="css/style.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel agency landing</title>
+    <link rel="stylesheet" href="scss/style.min.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-  <div class="header">
-    <div class="container">
-      <div class="navbar">
-        <img src="images/navbar-logo.svg" alt="navbar logo" class="navbar__logo" />
-        <div class="navbar__menu">
-          <a href="" class="menu__item">Home</a>
-          <a href="" class="menu__item">Events</a>
-          <a href="" class="menu__item">About</a>
-          <a href="" class="menu__item">Blog</a>
-          <a href="" class="menu__item">Contact</a>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <img src="images/navbar-logo.svg" alt="navbar logo" class="navbar__logo" />
+                <div class="navbar__menu">
+                    <a href="" class="menu__item">Home</a>
+                    <a href="" class="menu__item">Events</a>
+                    <a href="" class="menu__item">About</a>
+                    <a href="" class="menu__item">Blog</a>
+                    <a href="" class="menu__item">Contact</a>
+                </div>
+                <div class="navbar__btn button">
+                    <span class="icon icon-call"></span>
+                    <span class="navbar__btn-phone">+38 (050) 884 3693</span>
+                </div>
+            </div>
+
+            <div class="header__row">
+                <!-- col 1 -->
+                <div class="header__col">
+                    <div class="txt__container">
+                        <h1 class="txt__header"><span class="txt__yellow">Life is a journey</span>, not a destination
+                        </h1>
+                        <span class="col__sp">Let’s start your journey with us, your dream will come true...</span>
+                    </div>
+
+
+                    <div class="row__container">
+                        <div class="container__col button">
+                            <span class="container__col__sp">Explore Destinations</span>
+                        </div>
+                        <div class="container__col video-logo">
+                            <span class="icon play-button"></span>
+                            <span>Watch how it works</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- col 2 -->
+                <div class="header__col">
+                    <img src="images/trip.png" alt="trip image" class="trip-image">
+
+                    <div class="col__block">
+
+                        <img src="images/calendar-icon.svg" alt="calendar-icon" class="icon clndr__icon">
+                        <div class="txt-container">
+                            <span class="col__block__header">250k</span>
+                            <span class="col__block__txt">Plan Your Trip</span>
+                        </div>
+
+                    </div>
+
+                    <div class="col__block2">
+                        <img src="images/trip-icon.svg" alt="trip-icon" class="icon trp__icon">
+                        <div class="txt-container">
+
+                            <span class="col__block__header">Upcoming Trips</span>
+                            <span class="col__block__txt">Today at 12.00 PM</span>
+                            <div class="container__col button">
+                                <span class="container__col__sp">Join now</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-        <div class="navbar__btn button">
-          <span class="icon icon-call"></span>
-          <span class="navbar__btn-phone">+38 (050) 884 3693</span>
-        </div>
-      </div>
     </div>
-  </div>
+    </div>
+
+
+
+
 </body>
 
 </html>
