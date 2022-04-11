@@ -27,8 +27,8 @@ body {
         border-radius: 0;
     }
     @media (max-width: 1280px) {
-        width: 100%;
-        padding: 10px 10px 100px 10px;
+        max-width: 100%;
+        padding: 10px 0 100px 0;
     }
 }
 
@@ -84,7 +84,11 @@ body {
     height: 80px;
     line-height: 80px;
 }
-
+.navbar__btn {
+    @media(max-width: 1280px) {
+        margin-top: 30px;
+    }
+}
 .navbar__btn-phone {
     @media (max-width: 580px) {
         display: none;
@@ -143,7 +147,7 @@ body {
             line-height: 160%;
         }
         .container__col {
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-weight: 400;
             font-size: 24px;
             .container__col__sp {
@@ -158,7 +162,6 @@ body {
                 @media (max-width: 1600px) {
                     margin: 0;
                 }
-                
             }
         }
         .row__container {
@@ -264,14 +267,14 @@ body {
 // sect2
 
 .prom-tour {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     margin: 0 auto;
-    margin-top: 190px;
+    margin-top: 150px;
     max-width: 1460px;
     color: $txt-color;
     line-height: 180%;
-    @media(max-width: 900px){
+    @media (max-width: 900px) {
         max-width: 90%;
     }
     .header__container {
@@ -286,23 +289,28 @@ body {
             color: $header-color;
         }
         .header__txt {
+            line-height: 40px;
+            font-size: 24px;
             font-weight: 400;
+            @media (max-width: 550px) {
+                font-size: 16px;
+                line-height: normal;
+            }
         }
     }
     .prom-tour__cards {
         display: flex;
         margin-top: 50px;
         justify-content: space-around;
-
         font-weight: 500;
         text-align: center;
         color: $header-color;
         font-size: 30px;
-        @media(max-width: 1380px){
+        @media (max-width: 1380px) {
             flex-direction: column;
             align-items: center;
         }
-        
+
         .card__img {
             width: 450px;
             height: 430px;
@@ -310,7 +318,7 @@ body {
             border-radius: 20px;
             background-repeat: no-repeat;
             background-size: cover;
-            @media(max-width: 670px){
+            @media (max-width: 670px) {
                 width: calc(450px / 1.5);
                 height: calc(430px / 1.5);
             }
@@ -323,6 +331,112 @@ body {
         }
         .img3 {
             background-image: url(../images/card-img3.jpg);
+        }
+    }
+
+    &__col {
+        max-width: 50%;
+        position: relative;
+    }
+    .prom-tour__col {
+        margin-bottom: 40px;
+        max-width: fit-content;
+
+        .tour-block {
+            position: relative;
+            z-index: 9999;
+            width: 600px;
+            height: 400px;
+
+            background-color: #742431;
+            opacity: 0.8;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+
+            @media (max-width: 650px) {
+                width: 400px;
+                height: 200px;
+            }
+            @media (max-width: 450px) {
+                width: 300px;
+                height: 150px;
+            }
+        }
+        .col__txt-container {
+            z-index: 100000;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-size: 32px;
+            font-weight: 600;
+            @media (max-width: 450px) {
+                font-size: 1.5rem;
+            }
+        }
+        .tour-col-img {
+            max-width: 100%;
+            position: absolute;
+            bottom: calc(50% - 314px / 2);
+            left: calc(50% - 279px / 2);
+            @media (max-width: 650px) {
+                max-width: 50%;
+                bottom: calc(50% - 200px / 2);
+                left: calc(50% - 177px / 2);
+            }
+            @media (max-width: 450px) {
+                max-width: 50%;
+                bottom: calc(50% - 150px / 2);
+                left: calc(50% - 125px / 2);
+            }
+        }
+        .tour-col-img2 {
+            max-width: 100%;
+            bottom: calc(50% - 346px / 2);
+            left: calc(50% - 346px / 2);
+            @media (max-width: 650px) {
+                max-width: 50%;
+                bottom: calc(50% - 200px / 2);
+                left: calc(50% - 200px / 2);
+            }
+
+            @media (max-width: 420px) {
+                max-width: 50%;
+                bottom: calc(50% - 200px / 2);
+                left: calc(50% - 200px / 2);
+            }
+            @media (max-width: 450px) {
+                max-width: 50%;
+                bottom: calc(50% - 150px / 2);
+                left: calc(50% - 150px / 2);
+            }
+        }
+        .button-prom {
+            margin-top: 40px;
+            border: 1px solid #ffffff;
+            border-radius: 80px;
+            background-color: transparent;
+            &__txt {
+                font-weight: 500;
+                font-size: 22px;
+            }
+            @media (max-width: 450px) {
+                margin-top: 20px;
+                padding: 0 20px;
+                line-height: 50px;
+                height: 50px;
+
+                .button-prom__txt {
+                    font-size: 20px;
+                }
+            }
         }
     }
 }
