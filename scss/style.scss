@@ -606,3 +606,60 @@ body {
         }
     }
 }
+.choose-sect {
+    .choose__header-container {
+        margin-bottom: 120px;
+    }
+    .choose__card {
+        line-height: 36px;
+        max-width: 450px;
+        max-height: 430px;
+        box-shadow: 0px 10px 60px rgba(38, 45, 118, 0.08);
+        border-radius: 20px;
+        @media (max-width: 1380px) {
+            margin-bottom: 70px;
+        }
+        .card__contain {
+            position: relative;
+            height: 100%;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            &::before {
+                position: absolute;
+                top: -80px;
+            }
+        }
+        .card__contain1 {
+            &::before {
+                content: url(../images/star-icon.svg);
+            }
+        }
+        .card__contain2 {
+            &::before {
+                content: url(../images/world-icon.svg);
+            }
+        }
+        .card__contain3 {
+            &::before {
+                content: url(../images/finger-icon.svg);
+            }
+        }
+        .card__txt {
+            font-family: $poppins;
+            font-size: 20px;
+            font-weight: normal;
+            color: $txt-color;
+            margin-bottom: 90px;
+            @media(max-width: 550px){
+                font-size: 18px;
+            }
+        }
+        .card__header {
+            margin-top: 120px;
+            font-size: 30px;
+        }
+    }
+}
