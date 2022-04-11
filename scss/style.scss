@@ -9,7 +9,11 @@ body {
     font-weight: 400;
     color: white;
 }
-
+@media (max-width: 550px) {
+    section {
+        margin-top: 80px !important;
+    }
+}
 .container {
     max-width: 1920px;
     margin: 0 auto;
@@ -85,7 +89,7 @@ body {
     line-height: 80px;
 }
 .navbar__btn {
-    @media(max-width: 1280px) {
+    @media (max-width: 1280px) {
         margin-top: 30px;
     }
 }
@@ -265,7 +269,9 @@ body {
 }
 
 // sect2
-
+.header__sp {
+    color: $header-color;
+}
 .prom-tour {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -285,9 +291,7 @@ body {
             font-size: 36px;
             line-height: 180%;
         }
-        .header__sp {
-            color: $header-color;
-        }
+
         .header__txt {
             line-height: 40px;
             font-size: 24px;
@@ -340,8 +344,11 @@ body {
     }
     .prom-tour__col {
         margin-bottom: 40px;
-        max-width: fit-content;
+        max-width: 50%;
 
+        @media (max-width: 1380px) {
+            max-width: fit-content;
+        }
         .tour-block {
             position: relative;
             z-index: 9999;
@@ -435,6 +442,112 @@ body {
 
                 .button-prom__txt {
                     font-size: 20px;
+                }
+            }
+        }
+    }
+}
+.ltst-tour {
+    .ltst__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1460px;
+        padding: 30px;
+        line-height: 43px;
+        @media (max-width: 1380px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .ltst-tour__col {
+            position: relative;
+            &:nth-of-type(1) {
+                @media (max-width: 1380px) {
+                    max-width: 890px;
+                }
+            }
+            &:nth-of-type(2) {
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    width: 140px;
+                    height: 140px;
+                    background-color: #ee5060;
+                    border-radius: 20px;
+                    z-index: -1;
+                }
+                &::after {
+                    content: " ";
+                    position: absolute;
+                    bottom: -20px;
+                    right: -20px;
+                    width: 230px;
+                    height: 230px;
+                    background-color: #f0c53e;
+                    border-radius: 20px;
+                    z-index: -1;
+                }
+            }
+            .ltst-tour__header {
+                font-size: 36px;
+                font-weight: 500;
+
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    background-color: #f0c53e;
+                    border-radius: 50%;
+                    z-index: -1;
+                    left: -25px;
+                    top: 0;
+                    @media (max-width: 1380px) {
+                        left: 50%;
+                        top: 0;
+                        transform: translate(-50%, 0);
+                    }
+                }
+                &::after {
+                    @media (max-width: 1380px) {
+                        right: 30%;
+                        top: 50%;
+                    }
+                    content: " ";
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    background-color: #f0c53e;
+                    border-radius: 50%;
+                    z-index: -1;
+                    right: 50px;
+                    bottom: 55%;
+                }
+            }
+            .ltst-tour__txt {
+                font-size: 24px;
+                font-weight: normal;
+                @media (max-width: 550px) {
+                    font-size: 16px;
+                    line-height: normal;
+                }
+            }
+            .ltst-tour__link {
+                color: #ee5060;
+                text-decoration: none;
+                font-size: 22px;
+                font-weight: normal;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .ltst__iframe {
+                border-radius: 20px;
+                max-width: 100%;
+                @media (max-width: 550px) {
+                    height: 300px;
                 }
             }
         }
