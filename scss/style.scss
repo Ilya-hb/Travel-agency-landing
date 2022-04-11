@@ -1,11 +1,12 @@
 $header-color: #7f2736;
 $txt-color: #2c2d32;
-
+$nunito: "Nunito Sans", sans-serif;
+$poppins: "Poppins", sans-serif;
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: $poppins;
     font-weight: 400;
     color: white;
 }
@@ -118,7 +119,7 @@ body {
 
 .header__row {
     display: flex;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: $nunito;
     @media (max-width: 1280px) {
         flex-direction: column;
         align-items: center;
@@ -151,7 +152,7 @@ body {
             line-height: 160%;
         }
         .container__col {
-            font-family: "Poppins", sans-serif;
+            font-family: $poppins;
             font-weight: 400;
             font-size: 24px;
             .container__col__sp {
@@ -257,7 +258,7 @@ body {
             .button {
                 margin-top: 10px;
                 color: white;
-                font-family: "Nunito Sans", sans-serif;
+                font-family: $nunito;
                 font-size: 20px;
                 font-weight: bold;
                 width: 100px;
@@ -273,7 +274,7 @@ body {
     color: $header-color;
 }
 .prom-tour {
-    font-family: "Poppins", sans-serif;
+    font-family: $poppins;
     font-weight: 700;
     margin: 0 auto;
     margin-top: 150px;
@@ -548,6 +549,58 @@ body {
                 max-width: 100%;
                 @media (max-width: 550px) {
                     height: 300px;
+                }
+            }
+        }
+    }
+}
+
+.team-sect {
+    .team__header {
+        line-height: 64px;
+        font-family: $nunito;
+        font-weight: bold;
+        font-size: 40px;
+        text-align: left;
+        @media (max-width: 1380px) {
+            text-align: center;
+        }
+    }
+    .team__container {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1380px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .team__col {
+            &:nth-of-type(1) {
+                width: 60%;
+            }
+            &:nth-of-type(2) {
+                width: 40%;
+            }
+            &__img {
+                width: 100%;
+            }
+            @media (max-width: 1380px) {
+                width: 100% !important;
+            }
+            .team__ul {
+                font-weight: 400;
+                padding-inline-start: 0;
+                color: #696984;
+
+                &__li {
+                    text-align: left;
+                    list-style: none;
+                    max-width: 550px;
+                    margin-bottom: 40px;
+                    &::before {
+                        content: url(../images/ellipse1.svg);
+                        float: left;
+                        margin: 10px 40px;
+                    }
                 }
             }
         }
